@@ -2,6 +2,11 @@
 # Boids-Swarm-DLL
 A DLL which runs a Boids Swarm simulation on GPU using Libtorch, designed to work with `Unreal Engine`.
 
+## About
+- The actual Boids Algorithm is implemented in Pytorch
+- It's implemented in 3d, with both goal targeting and avoidance
+- The model has been JIT traced and can be run by LibTorch on GPU
+
 ## Requirements:
 - CMake
 - Visual Studio
