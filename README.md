@@ -21,5 +21,5 @@ cmake --build . --config Release
 - Copy this file wherever you need!
 
 ## PyTorch/Jit Trace
-- If you are interested to modify the Boids algorithm, Run this Jupyter Notebook:[user manual page](/BoidsJitExport.ipynb).
+- If you are interested to modify or re-export the Boids model, Run this [Jupyter Notebook](BoidsJitExport.ipynb).
 
