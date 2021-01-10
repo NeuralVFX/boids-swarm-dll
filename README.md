@@ -6,6 +6,7 @@ A DLL which runs a Boids Swarm simulation on GPU using Libtorch, designed to wor
 - CMake
 - Visual Studio
 - LibTorch 1.7
+- PyTorch 1.7 (Required Only to Re-Export Model)
 
 ## Project Setup
 - Clone this repo: `git clone https://github.com/NeuralVFX/boids-swarm-dll.git`
@@ -19,4 +20,6 @@ cmake --build . --config Release
 - This should generate a Visual Studio Project and a file called `Release/boids.dll`
 - Copy this file wherever you need!
 
+## PyTorch/Jit Trace
+- If you are interested to modify the Boids algorithm, Run this Jupyter Notebook:[user manual page](/BoidsJitExport.ipynb).
 
