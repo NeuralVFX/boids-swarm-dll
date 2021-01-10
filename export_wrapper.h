@@ -28,7 +28,10 @@ extern "C"
 {
 #endif
 
-	DataStorage_API bool Run(float* pos, float* vel, float gx, float gy, float gz, float ax, float ay, float az, float t_mult, float a_mult, float a_dist, int ticket);
+	DataStorage_API bool Run(float* pos, float* vel, float gx,
+		float gy, float gz, float ax,
+		float ay, float az, float t_mult,
+		float a_mult, float a_dist, int ticket);
 
 #ifdef __cplusplus
 }
