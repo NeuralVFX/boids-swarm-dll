@@ -14,7 +14,7 @@ public:
 	/** Count and dimensions */
 	int count, width, height, depth;
 
-	/** Velocitie limites*/
+	/** Velocity limits*/
 	float min_dist, max_dist, vel_mult;
 	float min_vel, max_vel, maxacc;
 };
