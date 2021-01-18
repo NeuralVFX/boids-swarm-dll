@@ -8,9 +8,6 @@
 /** Struct to hold attribute data needed to initialize simulation */
 struct AttributeData
 {
-
-public:
-
 	/** Count and dimensions */
 	int count, width, height, depth;
 
