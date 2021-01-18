@@ -5,27 +5,68 @@
 #include <memory>
 
 
+/** Struct to hold attribute data needed to initialize simulation */
+struct AttributeData
+{
+
+public:
+
+	/** Count and dimensions */
+	int count, width, height, depth;
+
+	/** Velocitie limites*/
+	float min_dist, max_dist, vel_mult;
+	float min_vel, max_vel, maxacc;
+};
+
+
+/** Struct to hold attribute data which can change per tick */
+struct TickData
+{
+	/** Goal and avoid targets */
+	float gx, gy, gz;
+	float ax, ay, az;
+
+	/** Multipliers and distance cut-off */
+	float t_mult, a_mult, a_dist;
+
+	/** Index of which model to lookup */
+	int ticket;
+};
+
+
+/** Class to manage loading and running of Boids Libtorch model */
 class boids
 {
 public:
 
-	// Torch Model Loader
+	/** Torch model loader array */
 	std::vector<torch::jit::script::Module> modules;
 
 public:
 
 	boids();
 
-	int init(int count, int width, int height, int depth,
-		float min_dist, float max_dist, float vel_mult,
-		float min_vel, float  max_vel, float maxacc);
+	/**
+	 * Create Libtorch model and set attributes.
+	 * @param attributes - Set of attributes required for initialization.
+	 * @return interger of what index in the model array the new model is assigned.
+	 */
+	int init(AttributeData attributes);
 
+	/**
+	 * Empty the Libtorch model array
+	 */
 	void close();
 
-	bool run(float* pos, float* vel, float gx,
-		float gy, float gz, float ax, float ay,
-		float az, float t_mult, float a_mult,
-		float a_dist, int ticket);
+	/**
+	 * Run single tick of Boids simulation.
+	 * @param pos - Array to ouput new position values to.
+	 * @param vel - Array to ouput new velocity values to.
+	 * @param tick_attrs - Set of attributes required for tick.
+	 * @return Whether the operatio was successful.
+	 */
+	bool run(float* pos, float* vel, TickData tick_attrs);
 
 	~boids();
 };
