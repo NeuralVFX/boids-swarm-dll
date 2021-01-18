@@ -9,7 +9,6 @@ boids::boids()
 
 int boids::init(AttributeData attributes)
 {
-
 	// Add Model To Model Array
 	modules.emplace_back(torch::jit::load("C:/ML/boids_dll/boids.ptc"));
 
@@ -25,7 +24,6 @@ int boids::init(AttributeData attributes)
 
 	// Return Ticket Numer, Used to LookUp Model During Inference
 	return modules.size() - 1;
-
 }
 
 
@@ -37,7 +35,6 @@ void boids::close()
 
 bool boids::run(float* pos, float * vel, TickData tick_attrs)
 {
-
 	torch::NoGradGuard no_grad_;
 
 	try 
