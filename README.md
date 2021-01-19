@@ -20,7 +20,8 @@ This is one of two repositories which are required to build this project:
 
 ## Project Setup
 - Clone this repo: `git clone https://github.com/NeuralVFX/boids-swarm-dll.git`
-- Open `boids.cpp` and replace the `"boids.ptc"` path to match the path on your system
+- Open the `code` directory
+- Open `boids.cpp` and replace the `"boids.ptc"` path to match the path on your system (resides in the libtorch dir of this project)
 - Open `build/CMakeLists.txt` and replace the path for `Torch_DIR`
 - Run these commands to build the project(replace `DCMAKE_PREFIX_PATH` with your libtorch install directory):
 ```
@@ -31,5 +32,5 @@ cmake --build . --config Release
 - Copy this file wherever you need!
 
 ## PyTorch/Jit Trace
-- If you are interested to modify or re-export the Boids model, Run this [Jupyter Notebook](BoidsJitExport.ipynb).
+- If you are interested to modify or re-export the Boids model, Run this [Jupyter Notebook](libtorch/BoidsJitExport.ipynb).
 
