@@ -3,6 +3,7 @@
 A DLL which runs a Boids Swarm simulation on GPU using Libtorch, designed to work with `Unreal Engine`.
 
 ## About
+This is one of two repositories which are required to build this project:
 - [unreal-boids-swarm-plugin](https://github.com/NeuralVFX/unreal-boids-swarm-plugin)
 - [boids-swarm-dll](https://github.com/NeuralVFX/boids-swarm-dll/) - You are here.
 
