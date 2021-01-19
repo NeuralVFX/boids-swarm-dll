@@ -33,7 +33,7 @@ void boids::close()
 }
 
 
-bool boids::run(float* pos, float * vel, TickData tick_attrs)
+bool boids::run(float* pos, float* vel, TickData tick_attrs)
 {
 	torch::NoGradGuard no_grad_;
 
