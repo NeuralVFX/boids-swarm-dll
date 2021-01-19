@@ -11,7 +11,7 @@ struct AttributeData
 	/** Count and dimensions */
 	int count, width, height, depth;
 
-	/** Velocity limits*/
+	/** Velocity limits */
 	float min_dist, max_dist, vel_mult;
 	float min_vel, max_vel, maxacc;
 };
@@ -52,7 +52,7 @@ public:
 	int init(AttributeData attributes);
 
 	/**
-	 * Empty the Libtorch model array
+	 * Empty the Libtorch model array.
 	 */
 	void close();
 
