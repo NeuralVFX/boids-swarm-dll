@@ -21,7 +21,7 @@ This is one of two repositories which are required to build this project:
 ## Project Setup
 - Clone this repo: `git clone https://github.com/NeuralVFX/boids-swarm-dll.git`
 - Open `boids.cpp` and replace the `"boids.ptc"` path to match the path on your system
-- Open `build/CMakeLists.txt` and replace the directort for `Torch_DIR`
+- Open `build/CMakeLists.txt` and replace the path for `Torch_DIR`
 - Run these commands to build the project(replace `DCMAKE_PREFIX_PATH` with your libtorch install directory):
 ```
 cmake ./build -DCMAKE_PREFIX_PATH=C:\libtorch -DCMAKE_GENERATOR_PLATFORM=x64  ..
